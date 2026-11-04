@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio | PetMatch Mini</title>
+</head>
+<body>
+    <main>
+        <h1>PetMatch Mini</h1>
+        <strong th:text="${projectName}">Nombre del Proyecto</strong>
+        <p th:text="${message}">Mensaje de bienvenida.</p>
+        <a th:href="@{/about}" href="/about">Conocer el proyecto</a>
+    </main>
+</body>
+</html>
