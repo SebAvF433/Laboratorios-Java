@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="es" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio | PetMatch Mini</title>
-</head>
+<head th:replace="~{fragments/head :: head('Inicio | PetMatch Mini')}"></head>
 <body>
-    <main>
-        <h1>PetMatch Mini</h1>
-        <strong th:text="${projectName}">Nombre del Proyecto</strong>
-        <p th:text="${message}">Mensaje de bienvenida.</p>
-        <a th:href="@{/about}" href="/about">Conocer el proyecto</a>
+    <nav th:replace="~{fragments/navigation :: navigation}"></nav>
+
+    <main class="page-container">
+        <section class="content-panel">
+            <h1>Bienvenido a PetMatch Mini</h1>
+            <p class="page-intro" th:text="${message}">
+                Bienvenido al catálogo de mascotas.
+            </p>
+            <p>Explora un catálogo de ejemplo construido con Java y Spring Boot.</p>
+            <a class="button-link" th:href="@{/pets}" href="/pets">Explorar mascotas</a>
+        </section>
     </main>
 </body>
 </html>

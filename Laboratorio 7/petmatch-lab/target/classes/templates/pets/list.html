@@ -1,15 +1,30 @@
 <!DOCTYPE html>
 <html lang="es" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mascotas | PetMatch Mini</title>
-</head>
+<head th:replace="~{fragments/head :: head('Catálogo | PetMatch Mini')}"></head>
 <body>
-    <main>
-        <h1>Mascotas del catálogo</h1>
-        <p>Hay <strong th:text="${pets.size()}">0</strong> mascotas disponibles.</p>
-        <a th:href="@{/}" href="/">Volver al inicio</a>
+    <nav th:replace="~{fragments/navigation :: navigation}"></nav>
+
+    <main class="page-container">
+        <h1>Catálogo de mascotas</h1>
+        <p class="page-intro">Selecciona una mascota para conocer sus detalles.</p>
+
+        <section class="content-panel" th:if="${pets.isEmpty()}">
+            <h2>El catálogo está vacío</h2>
+            <p>Vuelve cuando haya mascotas para mostrar.</p>
+        </section>
+
+        <section class="pet-grid"
+                 aria-label="Lista de mascotas"
+                 th:unless="${pets.isEmpty()}">
+            <article class="pet-card" th:each="pet : ${pets}">
+                <h2 th:text="${pet.name}">Nombre</h2>
+                <p>Especie: <span th:text="${pet.species}">Especie</span></p>
+                <p>Edad: <span th:text="${pet.age}">0</span> años</p>
+                <a class="button-link"
+                   th:href="@{/pets/{id}(id=${pet.id})}"
+                   href="#">Ver detalle</a>
+            </article>
+        </section>
     </main>
 </body>
 </html>
