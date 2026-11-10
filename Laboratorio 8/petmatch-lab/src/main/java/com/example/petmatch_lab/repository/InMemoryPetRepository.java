@@ -1,4 +1,4 @@
-package com.example.petmatchlab.repository;
+package com.example.petmatch_lab.repository;
 
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -7,7 +7,7 @@ import java.util.Optional;
 
 import org.springframework.stereotype.Repository;
 
-import com.example.petmatchlab.model.Pet;
+import com.example.petmatch_lab.model.Pet;
 
 @Repository
 public class InMemoryPetRepository {

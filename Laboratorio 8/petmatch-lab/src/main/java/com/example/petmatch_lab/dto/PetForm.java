@@ -1,4 +1,4 @@
-package com.example.petmatchlab.dto;
+package com.example.petmatch_lab.dto;
 
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;

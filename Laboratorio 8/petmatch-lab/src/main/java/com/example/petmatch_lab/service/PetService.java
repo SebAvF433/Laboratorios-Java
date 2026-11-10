@@ -1,13 +1,13 @@
-package com.example.petmatchlab.service;
+package com.example.petmatch_lab.service;
 
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
-import com.example.petmatchlab.dto.PetForm;
-import com.example.petmatchlab.model.Pet;
-import com.example.petmatchlab.repository.InMemoryPetRepository;
+import com.example.petmatch_lab.dto.PetForm;
+import com.example.petmatch_lab.model.Pet;
+import com.example.petmatch_lab.repository.InMemoryPetRepository;
 
 @Service
 public class PetService {
