@@ -2,8 +2,10 @@ package com.example.petmatch_lab.service;
 
 import java.util.List;
 import java.util.Optional;
+
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
+
 import com.example.petmatch_lab.dto.PetForm;
 import com.example.petmatch_lab.model.Pet;
 import com.example.petmatch_lab.repository.PetRepository;
